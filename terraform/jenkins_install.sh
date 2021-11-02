@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo yum update -y
-# Install OpenJDK 8
-sudo yum -y install java-1.8*
+# Install OpenJDK 11
+sudo amazon-linux-extras install java-openjdk11 -y
 # Install wget
 sudo yum -y install wget
 # Install Jenkins
@@ -13,4 +13,4 @@ sudo yum install jenkins -y
 # Start Jenkins service
 service jenkins start
 # Setup Jenkins to start at boot
-chkconfig jenkins on
+chkconfig jenkins on`

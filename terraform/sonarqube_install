@@ -1,0 +1,101 @@
+//install OpenJDK 11
+sudo apt-get update && sudo apt-get install default-jdk -y
+
+//Postgres DB setup
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
+
+//download Postgres
+sudo wget -q https://www.postgresql.org/media/keys/ACCC4CF8.asc -O - | sudo apt-key add -
+
+//install Postgres
+sudo apt-get -y install postgresql postgresql-contrib
+
+//start and enable Postgres service
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+
+//become postgres user
+sudo su - postgres
+
+//create sonar user
+createuser sonar
+
+//enter sql shell
+psql
+
+//execute the following line by line
+ALTER USER sonar WITH ENCRYPTED password 'password';
+CREATE DATABASE sonarqube OWNER sonar;
+GRANT ALL PRIVILEGES ON DATABASE sonarqube to sonar;
+
+//come back to root user
+\q
+exit
+
+//download and install SonarQube
+sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.6.0.39681.zip
+sudo apt-get -y install unzip
+sudo unzip sonarqube*.zip -d /opt
+sudo mv /opt/sonarqube-8.6.0.39681 /opt/sonarqube -v
+
+//create group
+sudo groupadd sonarGroup
+
+//add sonar user to sonarGroup
+sudo useradd -c "user to run SonarQube" -d /opt/sonarqube -g sonarGroup sonar
+
+//grant access for sonar user to sonarqube directory
+sudo chown sonar:sonarGroup /opt/sonarqube -R
+
+//edit the properties file
+sudo vi /opt/sonarqube/conf/sonar.properties
+sonar.jdbc.username=sonar
+sonar.jdbc.password=password
+sonar.jdbc.url=jdbc:postgresql://localhost/sonarqube
+
+//edit the sonar shell file
+sudo vi /opt/sonarqube/bin/linux-x86-64/sonar.sh
+RUN_AS_USER=sonar
+
+//edit the sonar service file
+sudo vi /etc/systemd/system/sonar.service -->
+
+
+[Unit]
+Description=SonarQube service
+After=syslog.target network.target
+
+[Service]
+Type=forking
+
+ExecStart=/opt/sonarqube/bin/linux-x86-64/sonar.sh start
+ExecStop=/opt/sonarqube/bin/linux-x86-64/sonar.sh stop
+LimitNOFILE=131072
+LimitNPROC=8192
+User=sonar
+Group=sonarGroup
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+//kernel system changes
+sudo vi /etc/sysctl.conf
+vm.max_map_count=262144
+fs.file-max=65536
+
+//edit limits file
+sudo vi /etc/security/limits.conf
+sonar   -   nofile   65536
+sonar   -   nproc    4096
+
+//reload system changes 
+sudo sysctl -p
+
+//start SonarQube
+sudo systemctl start sonar
+sudo systemctl enable sonar
+sudo systemctl status sonar
+
+//check if SonarQube is running
+tail -f /opt/sonarqube/logs/sonar*.log

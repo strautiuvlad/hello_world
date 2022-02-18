@@ -1,7 +1,6 @@
 #!/bin/bash
 sudo yum update -y
-sudo yum -y install python
-sudo yum -y install python-pip
-pip install ansible
-sudo yum -y install docker
-service docker start
+sudo yum install python -y 
+sudo amazon-linux-extras install ansible2
+sudo yum install docker -y
+sudo service docker start

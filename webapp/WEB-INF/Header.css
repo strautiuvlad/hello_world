@@ -1,0 +1,72 @@
+#header {
+	margin:0 auto;
+	padding: 0;	
+	overflow: hidden;
+	width: 960px;
+}
+#header #logo {
+	float: left;
+	height: 144px;
+	width: 355px;
+}	
+#header #logo img {
+	border: 0;
+}
+#header ul {
+	float: right;
+	margin: 0;
+	padding: 70px 0 0 0;
+	overflow: hidden;	
+	width: 605px;
+}
+#header ul li {
+	list-style-type: none;
+	float: left;	
+	margin: 0;
+	padding: 0;
+	width: 121px;
+}
+#header ul li a,
+#header ul li a span,
+#header ul li a:hover,
+#header ul li a:hover span,
+#header ul li.selected a,
+#header ul li.selected a span {
+	background: url(images/menu.gif);	
+}
+#header ul li a { 
+	background-position: 10px 0; 
+	color: #2a4f5e;
+	display: block;
+	font-size: 14px;
+	height: 36px;
+	line-height: 36px;
+	margin: 0;
+	padding: 0 0 0 10px;
+	text-align: center;	
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #fff;
+} 
+#header ul li a span{ 
+	background-position: -70px 0; 
+	display: block;	
+	margin: 0;
+	padding: 0 10px 0 0;
+} 
+#header ul li a:hover { 
+	background-position: -186px -37px; 
+	color: #346b84;
+	text-shadow: none;
+} 
+#header ul li a:hover span { 
+	background-position: -70px -37px; 
+} 
+#header ul li.selected a{ 
+	background-position: 10px 36px; 
+	color: #fff;
+	text-shadow: none;
+} 
+#header ul li.selected a span{ 
+	background-position: -70px -74px; 
+} 

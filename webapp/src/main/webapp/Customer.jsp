@@ -46,9 +46,9 @@ $(document).ready(function(){
             <input type="text" name="address" maxlength="40">
 
             <label>Years of Experience:</label>
-            <input type="radio" id="under5" value="0-5" name="experience"><label for="under_5" class="light">0 - 5 yrs</label><br>
-            <input type="radio" id="under10" value="5-10" name="experience"><label for="under_10" class="light">6 - 10 yrs</label><br>
-            <input type="radio" id="over10" value=">11" name="experience"><label for="over_10" class="light"> 11+ yrs</label>
+            <input type="radio" id="under5" value="0-5" name="experience"><label for="under_5" class="light">0 - 5 years</label><br>
+            <input type="radio" id="under10" value="5-10" name="experience"><label for="under_10" class="light">6 - 10 years</label><br>
+            <input type="radio" id="over10" value=">11" name="experience"><label for="over_10" class="light"> 11+ years</label>
         </fieldset>
         <fieldset>
             <legend><span class="number">2</span>Your profile</legend>

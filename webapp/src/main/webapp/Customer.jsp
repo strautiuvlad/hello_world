@@ -9,6 +9,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Demo With Customer Details</title>
 <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/cust_css/main.css">
+<link rel="stylesheet" type="text/css" href="header.css" media="all" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.8/jquery.validate.min.js"></script>
 <script type="text/javascript">
@@ -44,9 +46,9 @@ $(document).ready(function(){
             <input type="text" name="address" maxlength="40">
 
             <label>Years of Experience:</label>
-            <input type="radio" id="under5" value="0-5" name="experience"><label for="under_5" class="light">0 - 5 years</label><br>
-            <input type="radio" id="under10" value="5-10" name="experience"><label for="under_10" class="light">6 - 10 years</label><br>
-            <input type="radio" id="over10" value=">11" name="experience"><label for="over_10" class="light"> 11+ years</label>
+            <input type="radio" id="under5" value="0-5" name="experience"><label for="under_5" class="light">0 - 5 yrs</label><br>
+            <input type="radio" id="under10" value="5-10" name="experience"><label for="under_10" class="light">6 - 10 yrs</label><br>
+            <input type="radio" id="over10" value=">11" name="experience"><label for="over_10" class="light"> 11+ yrs</label>
         </fieldset>
         <fieldset>
             <legend><span class="number">2</span>Your profile</legend>
@@ -90,4 +92,3 @@ $(document).ready(function(){
 </form>
 </body>
 </html>
-

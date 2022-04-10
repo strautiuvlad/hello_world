@@ -5,11 +5,11 @@
     double num = Math.random();
     if (num > 0.5) {
   %>
-      <h2>Number is above average!!</h2><p>(<%= num %>)</p>
+      <h2>Number is above average!</h2><p>(<%= num %>)</p>
   <%
     } else {
   %>
-      <h2>Number is too low!!</h2><p>(<%= num %>)</p>
+      <h2>Number is too low!</h2><p>(<%= num %>)</p>
   <%
     }
   %>

@@ -8,8 +8,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Customer Demo - Welcome Confirmation Page</title>
 <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="css/cust_css/style.css">
+<!--<link rel="stylesheet" href="css/cust_css/style.css">
 <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+-->
 </head>
 <body>
 	<div id="header">		

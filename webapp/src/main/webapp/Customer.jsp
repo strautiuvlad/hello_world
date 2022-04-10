@@ -9,8 +9,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Demo With Customer Details</title>
 <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="css/cust_css/main.css">
+<!--<link rel="stylesheet" href="css/cust_css/main.css">
 <link rel="stylesheet" type="text/css" href="header.css" media="all" />
+-->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.8/jquery.validate.min.js"></script>
 <script type="text/javascript">

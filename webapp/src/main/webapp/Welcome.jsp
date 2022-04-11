@@ -35,7 +35,7 @@
         <td colspan="2" align="center"><%="Welcome "+customer.getName()+" !!!!. Your details Processed." %></td>
     </tr>
     <tr>
-        <td>Name </td>
+        <td>Name</td>
         <td><%=customer.getName()%></td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@
         <td><%=customer.getAddress() %></td>
     </tr>
     <tr>
-        <td>Mobile </td>
+        <td>Mobile no </td>
         <td><%=String.valueOf(customer.getMobile()) %></td>
     </tr>
     <tr>

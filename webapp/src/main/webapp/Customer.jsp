@@ -18,6 +18,7 @@
 
 body {
   font-family: 'Nunito', sans-serif;
+  background-image: url('https://wallpaper.dog/large/20403242.jpg');
   color: #384047;
 }
 
@@ -291,11 +292,12 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-	<div id="header">		
+	<div id="header">
+		<img src="images/cloud.png"/>
 			<ul>
-				<li><a href="index.html"><span>home</span></a></li>
-				<li><a href="Customer.jsp"><span>Apply Now</span></a></li>
-				<li><a href="Learning.html"><span>Learning Links</span></a></li>			
+				<li><a href="index.html"><span>Home</span></a></li>
+				<li><a href="Learning.html"><span>About Us</span></a></li>
+				<li><a href="Customer.jsp"><span>Apply Now</span></a></li>			
 			</ul>
 	</div>
 <form action="insertCustomer" method="post" id="signup_form">

@@ -1,4 +1,4 @@
-# Create a VPC
+# Create a VPC boss
 resource "aws_vpc" "production_vpc" {
   cidr_block = var.vpc_cidr
   tags = {

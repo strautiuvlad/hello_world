@@ -9,7 +9,7 @@
   <%
     } else {
   %>
-      <h2>Number is too low.</h2><p>(<%= num %>)</p>
+      <h2>Number is too low!</h2><p>(<%= num %>)</p>
   <%
     }
   %>
